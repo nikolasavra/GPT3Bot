@@ -1,4 +1,4 @@
-# GPT3Tutorial
+# GPT3Bot
 
 This is an implementation of an open-domain chatbot using GPT-3 pre-trained model from OpenAI.
 <br />
