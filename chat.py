@@ -28,7 +28,7 @@ if __name__=='__main__':
         conversation.append('USER: %s' % user_input)
         text_block = '\n'.join(conversation)
         prompt = open_file('prompt_chat.txt').replace('<<BLOCK>>', text_block)
-        prompt = prompt + '\nNickBot:'
+        prompt = prompt + '\nNick:'
         response = gpt3_completion(prompt)
-        print('NickBot:', response)
-        conversation.append('NickBot: %s' % response)
+        print('Nick:', response)
+        conversation.append('Nick: %s' % response)
