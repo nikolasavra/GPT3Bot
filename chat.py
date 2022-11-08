@@ -1,4 +1,5 @@
 import openai
+import re
 
 def open_file(filepath):
     with open(filepath, 'r', encoding = 'utf-8') as infile:
@@ -25,6 +26,9 @@ if __name__=='__main__':
     conversation = list()
     while True:
         user_input = input('USER: ')
+        x = re.search("bye.*", user_input.lower())
+        if x:
+          break
         conversation.append('USER: %s' % user_input)
         text_block = '\n'.join(conversation)
         prompt = open_file('prompt_chat.txt').replace('<<BLOCK>>', text_block)
